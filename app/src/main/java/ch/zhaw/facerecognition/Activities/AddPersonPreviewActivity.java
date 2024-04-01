@@ -75,7 +75,7 @@ public class AddPersonPreviewActivity extends Activity implements CameraBridgeVi
 
         Intent intent = getIntent();
         folder = intent.getStringExtra("Folder");
-        if(folder.equals("Test")){
+        if("Test".equals(folder)){
             subfolder = intent.getStringExtra("Subfolder");
         }
         name = intent.getStringExtra("Name");
@@ -163,7 +163,7 @@ public class AddPersonPreviewActivity extends Activity implements CameraBridgeVi
                         faces = MatOperation.rotateFaces(imgRgba, faces, ppF.getAngleForRecognition());
                         if(((method == MANUALLY) && capturePressed) || (method == TIME)){
                             MatName m = new MatName(name + "_" + total, img);
-                            if (folder.equals("Test")) {
+                            if ("Test".equals(folder)) {
                                 String wholeFolderPath = fh.TEST_PATH + name + "/" + subfolder;
                                 new File(wholeFolderPath).mkdirs();
                                 fh.saveMatToImage(m, wholeFolderPath + "/");

@@ -127,9 +127,9 @@ public class TestActivity extends AppCompatActivity {
 //                                              fileHelper.saveCroppedImage(imgRgb, ppF, file, name, total);
 
                                                 total++;
-                                                if (folderName.equals("reference")) {
+                                                if ("reference".equals(folderName)) {
                                                     total_reference++;
-                                                } else if (folderName.equals("deviation")) {
+                                                } else if ("deviation".equals(folderName)) {
                                                     total_deviation++;
                                                 }
 
@@ -138,9 +138,9 @@ public class TestActivity extends AppCompatActivity {
 
                                                 if (name.equals(name_recognized)) {
                                                     matches++;
-                                                    if (folderName.equals("reference")) {
+                                                    if ("reference".equals(folderName)) {
                                                         matches_reference++;
-                                                    } else if (folderName.equals("deviation")) {
+                                                    } else if ("deviation".equals(folderName)) {
                                                         matches_deviation++;
                                                     }
                                                 }
